@@ -23,7 +23,7 @@ function createApplication(){
                 }
             } else {
                 
-                if(method === 'middleware'){// 处理中间件
+                if(method === 'middle'){// 处理中间件
                     if (path === '/' || path === pathname || pathname.startsWith(path+'/')) {
                         handler(req, res, next);
                     } else {

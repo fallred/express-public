@@ -10,7 +10,8 @@ let app = express();
 app.use('/name',function(req, res, next){
     // console.log('middleware1');
     res.setHeader('Content-Type', 'text/html;charset=utf-8');
-    next('名字不合法');
+    // next('名字不合法');
+    next();
 });
 app.use(function(req, res, next){
     console.log('middleware2');
