@@ -6,14 +6,16 @@ let app = express();
 app.get('/name', function(req, res){
     // req代表请求，res代表响应
     res.end('zfpx');
-
 });
 app.get('/age', function(req, res){
     res.end('9');
 });
-app.post= function(req, res){
+app.post('/name', function(req, res){
     res.end('post name');
-}
+});
+app.all('*', function (req, res) {
+    res.end(req.method + 'user');
+});
 // 在3000端口上开启服务
 app.listen(3000, function(){
     console.log(`server start on 3000`);
